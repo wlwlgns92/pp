@@ -40,22 +40,23 @@
                 <input type="radio" value="여" name="mSex">여
                 <label for="floatingInput" id="sexcheck">성별</label>
             </div>
-        </form>
-        <!-- 다음주소 api -->
-        <input type="text" id="sample3_postcode" placeholder="우편번호" name="address1">
-        <input type="button" onclick="sample3_execDaumPostcode()" value="우편번호 찾기"><br>
-        <input type="text" id="sample3_address" placeholder="주소" name="address2"><br>
-        <input type="text" id="sample3_detailAddress" placeholder="상세주소" name="address3">
-        <input type="text" id="sample3_extraAddress" placeholder="참고항목" name="address4">
 
-        <div id="wrap" style="display:none;border:1px solid;width:500px;height:300px;margin:5px 0;position:relative">
-            <img src="//t1.daumcdn.net/postcode/resource/images/close.png" id="btnFoldWrap"
-                 style="cursor:pointer;position:absolute;right:0px;top:-1px;z-index:1" onclick="foldDaumPostcode()"
-                 alt="접기 버튼">
-        </div>
-        <div id="addresscheck"></div>
-        <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
-        <script>
+            <!-- 다음주소 api -->
+            <input type="text" id="sample3_postcode" placeholder="우편번호" name="address1">
+            <input type="button" onclick="sample3_execDaumPostcode()" value="우편번호 찾기"><br>
+            <input type="text" id="sample3_address" placeholder="주소" name="address2"><br>
+            <input type="text" id="sample3_detailAddress" placeholder="상세주소" name="address3">
+            <input type="text" id="sample3_extraAddress" placeholder="참고항목" name="address4">
+
+            <div id="wrap"
+                 style="display:none;border:1px solid;width:500px;height:300px;margin:5px 0;position:relative">
+                <img src="//t1.daumcdn.net/postcode/resource/images/close.png" id="btnFoldWrap"
+                     style="cursor:pointer;position:absolute;right:0px;top:-1px;z-index:1" onclick="foldDaumPostcode()"
+                     alt="접기 버튼">
+            </div>
+            <div id="addresscheck"></div>
+            <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+            <script>
          // 우편번호 찾기 찾기 화면을 넣을 element
     var element_wrap = document.getElementById('wrap');
 
@@ -129,10 +130,9 @@
         // iframe을 넣은 element를 보이게 한다.
         element_wrap.style.display = 'block';
     }
-
-
-        </script>
-        <input id="formsubmit" type="button" value="회원가입">
+            </script>
+            <input id="formsubmit" type="button" value="회원가입">
+        </form>
     </div>
 </div>
 </body>
