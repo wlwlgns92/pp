@@ -26,7 +26,6 @@ public class MemberController {
     }
 
     // 회원가입
-    @ResponseBody
     @PostMapping("/member/signupcontroller")
     public String signupcontroller(MemberDto memberDto,
                                    @RequestParam("address1") String address1,
@@ -63,9 +62,11 @@ public class MemberController {
         }
     } // 이메일 중복체크 end
 
+    //로그인
     @ResponseBody
     @PostMapping("/member/logincontroller")
     public String logincontroller(@RequestBody MemberDto memberDto) {
+        System.out.println(memberDto);
         MemberDto loginDto = memberService.login(memberDto);
         if(loginDto != null ) {
             HttpSession session = request.getSession();
