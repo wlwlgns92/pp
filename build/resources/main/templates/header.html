@@ -38,12 +38,10 @@
         </ul>
 
         <div class="col-md-3 text-end">
-            <button type="button" class="btn btn-outline-primary me-2" data-bs-target="#modallogin"
-                    data-bs-toggle="modal">로그인
-            </button>
-            <a th:href="@{/member/signup}">
-                <button type="button" class="btn btn-primary">회원가입</button>
-            </a>
+            <button th:if="${session.loginDto == null}" type="button" class="btn btn-outline-primary me-2" data-bs-target="#modallogin" data-bs-toggle="modal">로그인</button>
+            <a th:if="${session.loginDto == null}" th:href="@{/member/signup}"><button type="button" class="btn btn-primary">회원가입</button></a>
+            <a th:if="${session.loginDto != null}" th:href="@{/member/mypage}"><button type="button" class="btn btn-primary">마이페이지</button></a>
+            <a th:if="${session.loginDto != null}" th:href="@{/member/logout}"><button type="button" class="btn btn-primary">로그아웃</button></a>
 
         </div>
         <!-- 로그인 modal -->
@@ -59,7 +57,7 @@
                     <div class="modal-body p-5 pt-0">
                         <form class="">
                             <div class="form-floating mb-3">
-                                <input type="email" class="form-control rounded-4" id="loginmId"
+                                <input type="text" class="form-control rounded-4" id="loginmId"
                                        placeholder="ID">
                                 <label for="floatingInput">아이디</label>
                             </div>
@@ -75,7 +73,7 @@
                             <button th:onclick="findid()">아이디 찾기</button> <!-- 또 다른 모달창을 띄우고 싶다 -->
                             <button th:onclick="findpw()">비밀번호 찾기</button>
                             <hr class="my-4">
-                            <h2 class="fs-5 fw-bold mb-3">Or use a third-party</h2>
+                            <h2 class="fs-5 fw-bold mb-3"></h2>
                             <button class="w-100 py-2 mb-2 btn btn-outline-dark rounded-4" type="submit">
                                 <svg class="bi me-1" width="16" height="16">
                                     <use xlink:href="#twitter"/>

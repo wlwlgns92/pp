@@ -2,17 +2,16 @@ function login() {
 
     var loginmId = $("#loginmId").val();
     var loginmPw = $("#loginmPw").val();
-    var memberdto = {"loginmId": loginmId, "loginmPw": loginmPw};
-    alert(loginmId);
-    alert(loginmPw);
+//    var memberdto = {"loginmId": loginmId, "loginmPw": loginmPw};
 
     $.ajax({
-        url : "",
-        data : JSON.stringify(memberdto),
+        url : "/member/logincontroller",
+//        data : JSON.stringify(memberdto),
+        data : {"loginmId": loginmId, "loginmPw": loginmPw},
         method : "POST",
-        contentType : "application/json",
+//        contentType : "application/json",
         success : function(result) {
-            if(reusult == 1) {
+            if(result == 1) {
                 location.href="/";
             }else {
                 $("#loginmsg").html("일치하는 정보가 없습니다.");

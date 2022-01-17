@@ -146,31 +146,27 @@ $(function() {
     $("#formsubmit").click(function() {
         if ($("#mId").val == null) {
             alert("아이디를 입력해 주세요");
-        } else if ($("#idcheck").html != "사용가능") {
+        } else if ($("#idcheck").html() != "사용가능") {
             alert("아이디를 확인해 주세요");
-        } else if ($("#mPw").val == null) {
+        } else if ( $("#mPw").val == null) {
             alert("비밀번호를 입력해 주세요");
-        } else if ($("#pwcheck").html != "사용가능") {
+        } else if ($("#pwcheck").html() != "사용가능") {
             alert("비밀번호를 확인해 주세요");
         } else if ($("#mName").val == null) {
             alert("이름을 입력해 주세요");
-        } else if ($("#namecheck").html != "사용가능") {
+        } else if ($("#namecheck").html() != "사용가능") {
             alert("이름을 확인해 주세요");
         } else if ($("#mPhone").val == null) {
             alert("연락처를 입력해 주세요");
-        } else if ($("#phonecheck").html != "사용가능") {
+        } else if ($("#phonecheck").html() != "사용가능") {
             alert("연락처를 확인해 주세요");
         } else if ($("#mEmail").val == null) {
             alert("이메일을 입력해 주세요");
-        } else if ($("#emailcheck").html != "사용가능") {
+        } else if ($("#emailcheck").html() != "사용가능") {
             alert("이메일을 확인해 주세요");
-        } else if ($("#mSex").val == null) {
-            alert("성별을 선택해 주세요");
-        } else if ($("#sexcheck").html != "사용가능") {
-            alert("성별을 확인해 주세요");
         } else if ($("#mAddress").val == null) {
             alert("주소를 입력해 주세요");
-        } else if ($("#addresscheck").html != "사용가능") {
+        } else if ($("#addresscheck").html() != "사용가능") {
             alert("주소를 확인해 주세요");
         }
         else {
